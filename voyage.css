@@ -1,0 +1,251 @@
+body#accueil
+{
+	background: #fff;
+}
+
+
+ul{
+    list-style-type: none;
+
+}
+#main-nav{
+	display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 47px;
+    background-color: rgb(104, 193, 231);
+    border-bottom: 5px solid #FFF;
+}
+#nav{
+	display: flex;
+	justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
+#nav li{
+    float: left;
+    position: relative;
+    padding: 13px 18px;
+    color: #F2F1EF;
+}
+#nav li:hover{
+    cursor: pointer;
+    background-color: rgb(104, 193, 231);
+}
+
+.dropdown ul{
+    display: none;
+    position: absolute;
+    top: 46px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding: 0;
+    width: 100%;
+}
+.dropdown:hover ul.dropdown-list{
+    display: block;
+}
+.dropdown ul.dropdown-list li.a{
+    background-color:rgb(104, 193, 231);
+    width: 150px;
+    position: relative;
+}
+.sub-dropdown ul.sub-dropdown-list{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 204px;
+    width: 100%;
+}
+
+.sub-dropdown:hover ul{
+    display: block;
+}
+.sub-dropdown-list li{
+    background-color: rgb(104, 193, 231);
+}
+
+footer {
+	padding:0;
+	bottom: 0;
+	width: 100%;
+	z-index:20;
+	height:170px;
+	border-top:solid #fff;
+	background-color:rgb(104, 193, 231);
+	margin-top:60px;
+}
+
+.ttfooter {
+	display:flex;
+}
+
+.ttfooter .liens {
+	width:50%;
+	height:100%;
+}
+
+.liens #link {
+	height:100%;
+	margin-left:30px;
+}
+
+#link a {
+	text-decoration:none;
+	color:white;
+	font-weight:600;
+}
+
+#link a:hover
+{
+	color:rgb(34, 209, 253);
+}
+
+#link li {
+	list-style:none;
+	line-height:33px;
+	font-size:18px;
+}
+
+/*                    HEADER + NAV + FOOTER                              */
+
+
+
+/*                      PAGE D'ACCUEIL                                 */
+section.banner,
+section.blog-post
+{
+	height: 100vh;
+	background: url(images/travelb.jfif) no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section.banner
+{
+	background:url(images/bgbanner.jpg);
+	background-size: cover;
+}
+
+section.banner .content
+{
+	text-align: center;
+}
+
+section.banner .content h1 
+{
+	font-size: 120px;
+	color: rgb(34, 209, 253);
+	text-transform: uppercase;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+section.banner .content a
+{
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 10px 40px;
+	font-size: 24px;
+	text-decoration: none;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+section.banner .content a:hover 
+{
+	background: rgb(34, 209, 253);
+	border: 2px solid #fff;
+	color: #262626;
+}
+
+.post
+{
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	background: #fff; 
+}
+
+.post img
+{
+	height: 100%;
+	width: 100%;
+}
+
+.post .btn{
+	position: absolute;
+	border: 2px solid #262626;
+	color: #262626;
+	background: rgb(34, 209, 253);
+	padding: 10px 40px;
+	font-size: 24px;
+	text-decoration: none;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.post .btn.prev
+{
+	top: 50px;
+	left: -80px;
+}
+
+.post .btn.next
+{
+	bottom: 50px;
+	right: -80px;
+}
+
+.post-title
+{
+	position: absolute;
+	background: rgba(0, 0, 0, .9);
+	color: #fff;
+	bottom: 20px;
+	left: 20px;
+	font-size: 32px;
+	font-weight: 600;
+	padding: 20px;
+	line-height: 40px;
+	box-sizing: border-box;
+	width: 700px;
+}
+
+.post-date
+{
+	position: absolute;
+	border: 2px solid #262626;
+	top: -50px;
+	right: 50px;
+	background: rgb(34, 209, 253);
+	color: #262626;
+	padding: 20px;
+}
+
+.post-date span
+{
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+.post-date span:nth-child(1)
+{
+	font-size: 60px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.post-date span:nth-child(2),
+.post-date span:nth-child(3)
+
+{
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 20px;
+}

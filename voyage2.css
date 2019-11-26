@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+html
+{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+
+:root 
+{
+    --menu-speed: 0.75s;
+}
+
+#back
+{
+    padding: 10px;
+    position: fixed;
+    background: rgba(1, 1, 1, 0.5);
+    font-size: 20px;
+    z-index: 5;
+}
+
+#back a
+{
+    text-decoration: none;
+    color: white;
+}
+
+#back a:hover
+{
+    color: yellow;
+
+}
+.presentation
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+  
+.presentation .toggler 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+
+}
+  
+.presentation .hamburger
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation .toggler:checked
+{
+    cursor: pointer;
+    width: 1000vh;
+    height: 100vh;
+}
+.presentation .toggler:checked ~ .menu 
+{
+    visibility: visible;
+}
+.presentation .toggler:checked ~ .menu > div 
+{
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+  
+.presentation .toggler:checked ~ .menu > div > div 
+{
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+}
+  
+.presentation .menu 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.presentation .menu > div 
+{
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+  
+.presentation .menu > div > div 
+{
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.presentation .menu  img
+{   
+    width: 112%;
+    margin-left: -6%;
+}
+
+
+main
+{
+    width: 100%;
+    height: 100%;
+    background: url(images/lax.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main .box
+{
+    width: 100%;
+    height: 50%;
+}
+
+main .box img
+{
+    display: flex;
+    justify-content: start;
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+    position: relative;
+    animation: slide 5s infinite;
+    transform: rotate(7deg);
+}
+main h1
+{
+    font-size: 150px;
+    letter-spacing: 15px;
+    background: -webkit-linear-gradient(90deg, rgba(63,226,29,1) 5%, #f48115 39%, rgba(50,0,187,1) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+
+@keyframes slide
+{
+    0%{
+        left: -400px;
+    }
+    100%{
+        left: 1700px;
+    }
+}
+
+/*Section Los Angeles*/
+
+#lax
+{
+    width: 100%;
+    height: 100%;
+    background: url(images/lax2.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-top: 2px solid black;
+}
+
+#lax #debut
+{
+    width: 100%;
+    height: 50%;
+    background: rgba(1, 1, 1, 0.5);
+}
+
+#lax #debut p
+{
+    padding: 2%;
+    font-size: 35px;
+}
+
+#lax #photo
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(1, 1, 1, 0.5);
+    font-size: 30px;
+}
+#lax #photo #p1:hover
+{
+    background: url(images/paramount.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1.5s;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+#lax #photo #p3:hover p,
+#lax #photo #p2:hover p,
+#lax #photo #p1:hover p
+{
+    visibility: hidden;
+}
+
+
+#lax #photo #p2:hover
+{
+    background: url(images/hollywood.jpg) no-repeat;
+    background-position: center;
+    transition: 1.5s;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#lax #photo #p3:hover
+{
+    background: url(images/universal.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1.5s;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+.photo_box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+    height: 100%;
+}
+
+/*Section route*/
+
+#route
+{
+    width: 100%;
+    height: 100%;
+    background: url(images/route66.jpg) no-repeat;
+    background-size: cover;
+    border-top: 2px solid black;
+    text-align: center;
+    font-size: 40px;
+}
+
+#route img
+{
+    width: 400px;
+    height: 300px;
+    animation: bounce 1s ease infinite alternate;
+    position: relative;
+
+}
+@keyframes bounce
+{
+    from {top: 106px;}
+    50%  {top: 86px;}
+    to   {top: 106px;}
+}
+
+/*Petites villes*/
+
+#palm
+{
+    width: 100%;
+    height: 100%;
+    background: url(images/palmsp.jpg) no-repeat;
+    background-size: cover;
+    border-top: 2px solid black;
+}
+
+#palm #p_text
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+}
+#palm #p_text p
+{
+    padding: 5%;
+    font-size: 30px;
+}
+
+/*Grand Canyon*/
+
+#gc
+{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid black;
+    background: url(images/gc.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#gc video
+{
+    width: 500px;
+    border: 2px solid black;
+}
+#gc h2
+{
+    background: -webkit-linear-gradient(90deg, rgba(165,42,42,1) 34%, rgba(253,29,29,1) 50%, rgba(169,99,0,1) 63%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    margin: 0;
+}
+
+#gc p
+{
+    font-size: 30px;
+    margin: 0;
+}
+
+/*Las Vegas*/
+
+#lasv
+{
+    border-top: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background: url(images/lasv.jpg);
+    background-size: cover;
+
+}
+
+#lasv #lasv_titre
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 1, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#lasv h2
+{
+    background: -webkit-linear-gradient(90deg, rgba(206,68,18,1) 34%, rgba(253,153,29,1) 50%, rgba(239,187,82,1) 63%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+}
+
+#lasv p
+{
+    font-size:30px;
+}
+
+#lasv2
+{
+    border-top: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background: url(images/lasv.jpg);
+    background-size: cover;
+}
+#lasv2 #lasv_text 
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    background: rgba(1, 1, 1, 0.5);
+}
+#lasv2 .lasv_photo
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+}
+
+#lasv2 .lasv_photo img
+{
+    width: 400px;
+    height: 100%;
+    position: relative;
+    filter: blur(8px);
+}
+
+#lasv2 .lasv_photo .hov_g img
+{
+    left: -70%;
+    transition: 1s;
+}
+#lasv2 .lasv_photo .hov_g img:hover
+{
+    left: 0;
+    filter: blur(0);
+}
+#lasv2 .lasv_photo .hov_d img
+{
+    right: -70%;
+    transition: 1s;
+}
+#lasv2 .lasv_photo .hov_d img:hover
+{
+    right: 0;
+    filter: blur(0);
+}
+/* San Francisco */
+
+#sanf
+{
+    border-top: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background: url(images/sanf.jpg);
+    background-size: cover;
+    display: flex;
+
+}
+#sanf #space
+{
+    width: 60%;
+}
+#sanf #sanf_titre
+{
+    width: 40%;
+    height: 100%;
+    font-size: 80px;
+    background: rgba(1, 1, 1, 0.5);
+    text-align: center;
+}
+
+#sanf h2
+{
+    background: -webkit-linear-gradient(90deg, rgba(239,187,82,1) 20%, rgba(29,169,253,1) 30%, rgba(239,187,82,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#sanf #sanf_titre img
+{
+    width: 200px;
+    height: 180px;
+    border-radius: 100%;
+}
+
+#sanf2
+{
+    border-top: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background: url(images/sanf2.jpg) no-repeat;
+    background-size: cover;
+}
+
+#sanf2 #sanf2_text
+{
+    width: 100%;
+    height: 50%;
+    background: rgba(1, 1, 1, 0.5);
+    text-align: center;
+}
+
+#sanf2 #sanf2_text p
+{
+    margin: 0;
+    font-size: 30px;
+    padding: 3%;
+}
+
+
+#sanf2 #photo
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(1, 1, 1, 0.5);
+    font-size: 30px;
+}
+#sanf2 #photo #psanf1:hover
+{
+    background: url(images/goldg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1.5s;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+#sanf2 #photo #psanf2:hover
+{
+    background: url(images/tp.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1.5s;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+#sanf2 #photo #psanf3:hover
+{
+    background: url(images/alca.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1.5s;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+#sanf2 #photo #psanf3:hover p,
+#sanf2 #photo #psanf2:hover p,
+#sanf2 #photo #psanf1:hover p
+{
+    visibility: hidden;
+}
